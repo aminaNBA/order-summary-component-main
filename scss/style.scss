@@ -1,0 +1,108 @@
+@import '_responsive';
+@import '_variables';
+@import '_mixins';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container{
+    @include flex-center;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-color: $Pale_blue;
+    & .card{
+        background-color: #fff;
+        @include responsive(phone){
+            width: 400px;
+        }
+        @include responsive(desktop){
+            width: 500px;
+        }
+        border-radius: $border_R;
+        margin:100px 0;
+        &>img{
+            width: 100%;
+            border-radius: $border_R $border_R 0 0;
+        }
+        & .content{
+            text-align: center;
+            margin: 0 auto;
+
+            & h2{
+                color: $Dark_blue;
+                margin: 30px 0;
+            }
+            & p{
+                font-size: $Font_size_p;
+                color: rgba(0, 0, 0, 0.678);
+                line-height: 1.5em;
+                padding: 0 30px;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+        }
+        & .plan{
+            width: 80%;
+            @include flex-center;
+            background-color: $Very_pale_blue;
+            padding: 20px 30px;
+            margin: 30px auto;
+            border-radius: $border_R;
+            max-width: 360px;
+
+            & h4{
+                color: $Dark_blue;
+            }
+
+            & .change-plan{
+                font-weight: bold;
+                margin-left: 60px;
+                @include responsive(phone){
+                    margin-left: 20px;
+                }
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+
+        }
+
+        & .btn-pay{
+            background-color: $Bright_blue;
+            color: #fff;
+            @include responsive(phone){
+                padding: 10px 85px;
+            }
+            @include responsive(desktop){
+                padding: 10px 100px;
+            }
+
+            margin-top: 10px;
+            box-shadow: 0px 8px 20px #3829e06e;
+            text-decoration: none;
+            border-radius: $border_R;
+            font-weight: bold;
+            max-width: 360px;
+
+            &:hover{
+                background-color:  rgb(95, 82, 240);;
+            }
+        }
+        & .cancel{
+            margin: 30px 0;
+            display: block;
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.678);
+            font-weight: bold;
+        }
+    }
+}
+
+footer{
+    margin: 20px;
+}

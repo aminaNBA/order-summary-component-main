@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-size: cover;
+  background-color: #e0e8ff;
+}
+.container .card {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 100px 0;
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .container .card {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .container .card {
+    width: 500px;
+  }
+}
+.container .card > img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.container .card .content {
+  text-align: center;
+  margin: 0 auto;
+}
+.container .card .content h2 {
+  color: #1f2f56;
+  margin: 30px 0;
+}
+.container .card .content p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.678);
+  line-height: 1.5em;
+  padding: 0 30px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.container .card .plan {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7ff;
+  padding: 20px 30px;
+  margin: 30px auto;
+  border-radius: 15px;
+  max-width: 360px;
+}
+.container .card .plan h4 {
+  color: #1f2f56;
+}
+.container .card .plan .change-plan {
+  font-weight: bold;
+  margin-left: 60px;
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .container .card .plan .change-plan {
+    margin-left: 20px;
+  }
+}
+.container .card .plan .change-plan:hover {
+  text-decoration: none;
+}
+.container .card .btn-pay {
+  background-color: #3829e0;
+  color: #fff;
+  margin-top: 10px;
+  box-shadow: 0px 8px 20px #3829e06e;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: bold;
+  max-width: 360px;
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .container .card .btn-pay {
+    padding: 10px 85px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .container .card .btn-pay {
+    padding: 10px 100px;
+  }
+}
+.container .card .btn-pay:hover {
+  background-color: #5f52f0;
+}
+.container .card .cancel {
+  margin: 30px 0;
+  display: block;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.678);
+  font-weight: bold;
+}
+
+footer {
+  margin: 20px;
+}/*# sourceMappingURL=style.css.map */
